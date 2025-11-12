@@ -1,0 +1,108 @@
+.create-container {
+  min-height: 100vh;
+  padding: 40px 60px;
+  background: linear-gradient(135deg, #fff3e0, #e1f5fe);
+  font-family: 'Poppins', sans-serif;
+}
+
+.create-header h2 {
+  color: #0077b6;
+  font-size: 2rem;
+}
+
+.create-header p {
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.create-selector {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.create-selector button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 12px;
+  background: #e0e0e0;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.create-selector button.active {
+  background: #0077b6;
+  color: white;
+}
+
+.create-form {
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.1);
+  margin-bottom: 40px;
+}
+
+.create-form textarea {
+  width: 100%;
+  height: 180px;
+  padding: 15px;
+  font-size: 1rem;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  resize: none;
+  margin-bottom: 15px;
+}
+
+.upload-zone {
+  border: 2px dashed #0077b6;
+  padding: 40px;
+  text-align: center;
+  border-radius: 16px;
+  color: #0077b6;
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+
+.upload-zone input {
+  display: none;
+}
+
+.submit-btn {
+  background: #0077b6;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.submit-btn:hover {
+  background: #005f8c;
+}
+
+.community-section h3 {
+  color: #004c6d;
+  margin-bottom: 15px;
+}
+
+.community-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.community-card {
+  background: white;
+  padding: 15px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.community-card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}

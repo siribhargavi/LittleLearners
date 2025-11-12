@@ -1,0 +1,133 @@
+.dashboard-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(135deg, #e8f5e9, #e3f2fd);
+  font-family: 'Poppins', sans-serif;
+}
+
+.top-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 40px;
+  background: white;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.top-navbar .logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #0077b6;
+}
+
+.nav-links a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #0077b6;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #004c6d;
+}
+
+.user-profile img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #0077b6;
+}
+
+.dashboard-body {
+  display: flex;
+  flex: 1;
+}
+
+.sidebar {
+  width: 220px;
+  background: white;
+  box-shadow: 4px 0 10px rgba(0,0,0,0.05);
+  padding: 20px 0;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  padding: 12px 20px;
+  cursor: pointer;
+  transition: background 0.3s;
+  font-weight: 500;
+  color: #004c6d;
+}
+
+.sidebar li:hover {
+  background: #e1f5fe;
+  border-left: 4px solid #0077b6;
+}
+
+.main-content {
+  flex: 1;
+  padding: 40px;
+}
+
+.main-content h2 {
+  color: #004c6d;
+  font-size: 2rem;
+}
+
+.main-content p {
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+}
+
+.dash-card {
+  background: white;
+  border-radius: 20px;
+  padding: 25px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.dash-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+}
+
+.dash-card h3 {
+  color: #0077b6;
+}
+
+.dash-card p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.dash-card button {
+  margin-top: 10px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 10px;
+  background: #0077b6;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.dash-card button:hover {
+  background: #005f8c;
+}

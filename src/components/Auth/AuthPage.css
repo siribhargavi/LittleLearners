@@ -1,0 +1,154 @@
+.auth-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #e3f2fd, #fff5f8);
+  display: flex;
+  flex-direction: column;
+}
+
+.auth-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 60px;
+  background: white;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.auth-navbar .logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #0077b6;
+}
+
+.auth-links button {
+  background: none;
+  border: none;
+  margin: 0 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 8px 16px;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.auth-links button.active,
+.auth-links button:hover {
+  background: #0077b6;
+  color: white;
+}
+
+.auth-body {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+}
+
+.auth-left {
+  flex: 1;
+  padding: 50px;
+}
+
+.auth-left h2 {
+  font-size: 2rem;
+  color: #004c6d;
+}
+
+.auth-left p {
+  margin-top: 10px;
+  color: #333;
+  font-size: 1.1rem;
+}
+
+.auth-illustration {
+  width: 90%;
+  margin-top: 30px;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+.auth-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.auth-card {
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  width: 90%;
+  max-width: 400px;
+}
+
+.auth-card h3 {
+  color: #0077b6;
+  text-align: center;
+}
+
+.auth-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.auth-card input {
+  padding: 12px 15px;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  font-size: 1rem;
+}
+
+.auth-btn {
+  background: #0077b6;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+}
+
+.auth-btn:hover {
+  background: #005f8c;
+}
+
+.auth-divider {
+  text-align: center;
+  margin: 15px 0;
+  font-size: 0.9rem;
+  color: #777;
+}
+
+.social-buttons {
+  display: flex;
+  justify-content: space-around;
+}
+
+.google-btn, .facebook-btn {
+  border: none;
+  padding: 10px 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: transform 0.2s;
+}
+
+.google-btn { background: #fff; border: 1px solid #ccc; }
+.facebook-btn { background: #1877f2; color: white; }
+
+.google-btn:hover, .facebook-btn:hover {
+  transform: scale(1.05);
+}

@@ -1,0 +1,150 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* logo left, links middle, buttons right */
+  padding: 0.6rem 2rem;
+  background-color: #FFF3EB;
+  border-bottom: 2px solid #FFD93D;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  font-family: 'Baloo 2', cursive;
+  z-index: 100;
+}
+
+/* --- LOGO --- */
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  height: 60px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.site-logo {
+  height: 50px;
+  width: auto;
+  animation: popIn 0.8s ease-out;
+}
+
+@keyframes popIn {
+  0% { transform: scale(0.5); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+/* --- NAV LINKS --- */
+.nav-links {
+  display: flex;
+  gap: 1.2rem;
+  list-style: none;
+  margin: 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  font-family: 'Fredoka One', cursive;
+  font-size: 1rem;
+  color: #333;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #FF6B6B;
+  transform: translateY(-2px);
+}
+
+/* --- AUTH BUTTONS (right side) --- */
+.auth-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+/* Button shared styles */
+/* Button shared styles */
+.signin,
+.join-btn {
+  padding: 0.55rem 1.5rem;
+  border-radius: 12px;       /* smoother, less rounded than 20px */
+  font-weight: 600;
+  font-family: 'Baloo 2', cursive;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  color: #fff;
+  font-size: 1rem;
+}
+
+/* Join Now - yellow (keep previous style) */
+.join-btn {
+  background: linear-gradient(90deg, #ffb703, #ffd43b);
+  color: #0c2594;
+  box-shadow: 0 4px 12px rgba(255, 183, 3, 0.3);
+}
+
+.join-btn:hover {
+  background: linear-gradient(90deg, #ffd43b, #ffb703);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(255, 193, 7, 0.35);
+}
+
+/* Sign In - modern blue */
+.signin {
+  background: linear-gradient(90deg, #4da6ff, #1e90ff); /* subtle gradient blue */
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(30,144,255,0.3);
+}
+
+.signin:hover {
+  background: linear-gradient(90deg, #1e90ff, #4da6ff);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(30,144,255,0.35);
+}
+
+
+/* --- RESPONSIVE --- */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+    padding: 0.5rem 0;
+  }
+
+  .auth-buttons {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+  }
+}
+
+/* --- BEE ANIMATION --- */
+@keyframes fly-across {
+  0% { transform: translate(0, 0) rotate(0deg); opacity: 0; }
+  5% { opacity: 1; }
+  25% { transform: translate(250px, -20px) rotate(10deg); }
+  50% { transform: translate(500px, 10px) rotate(-10deg); }
+  75% { transform: translate(850px, -10px) rotate(15deg); }
+  90% { transform: translate(1100px, 5px) rotate(-5deg); opacity: 1; }
+  100% { transform: translate(1200px, 0) rotate(0deg); opacity: 0; }
+}
+
+.bee {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  width: 40px;
+  height: 40px;
+  background: url('bee.webp') no-repeat center/contain;
+  animation: fly-across 20s ease-in-out forwards;
+  pointer-events: none;
+  z-index: 200;
+}

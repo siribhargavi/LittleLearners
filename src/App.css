@@ -1,0 +1,19 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #fefcf8;
+  color: #333;
+}
+button {
+  cursor: pointer;
+  border: none;
+  transition: 0.3s;
+}
+html {
+  scroll-behavior: smooth;
+}
+.about-section {
+  scroll-margin-top: 100px; /* adjust to your navbar height */
+  padding: 4rem 2rem;
+  background-color: #fffaf2;
+}

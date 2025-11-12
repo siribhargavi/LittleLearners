@@ -1,0 +1,140 @@
+/* ================= Competitions Section ================= */
+.competitions-section {
+  position: relative;
+  text-align: center;
+  padding: 100px 40px;
+  background: linear-gradient(135deg, #f3def8, #c7f8f6);
+  overflow: hidden;
+}
+
+/* 🎊 Floating confetti background */
+.competitions-section::before,
+.competitions-section::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background-image: radial-gradient(circle, rgba(255, 255, 255, 0.7) 2px, transparent 2px),
+                    radial-gradient(circle, rgba(255, 235, 100, 0.7) 3px, transparent 3px);
+  background-size: 80px 80px, 120px 120px;
+  animation: confettiDrift 25s linear infinite;
+  z-index: 0;
+}
+
+@keyframes confettiDrift {
+  from {
+    background-position: 0 0, 0 0;
+  }
+  to {
+    background-position: 300px 600px, -200px 400px;
+  }
+}
+
+/* Title and subtitle */
+.competitions-section h2 {
+  font-family: 'Fredoka One', cursive;
+  font-size: 2.4rem;
+  color: #16b18a;
+  margin-bottom: 0.5rem;
+  position: relative;
+  z-index: 2;
+  animation: fadeUp 1s ease-out forwards;
+}
+
+.competitions-section .subtitle {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.2rem;
+  color: #4b3c2b;
+  margin-bottom: 3rem;
+  position: relative;
+  z-index: 2;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 1s ease-out 0.4s forwards;
+}
+
+/* Cards layout */
+.competitions-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  position: relative;
+  z-index: 2;
+}
+
+.competition-card {
+  background: white;
+  padding: 2rem 1.5rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  animation: fadeUp 1s ease-out forwards;
+}
+
+.competition-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.competition-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.competition-card h3 {
+  color: #004aad;
+  font-family: 'Fredoka One', cursive;
+  font-size: 1.4rem;
+  margin-bottom: 0.6rem;
+}
+
+.competition-card p {
+  font-family: 'Poppins', sans-serif;
+  color: #444;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+/* Join Button */
+.join-btn {
+  background: #ffd700;
+  color: #2b2b52;
+  font-family: 'Baloo 2', cursive;
+  border: none;
+  padding: 0.7rem 1.4rem;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.join-btn:hover {
+  background: #f4c300;
+  transform: scale(1.05);
+}
+
+/* Fade Up Animation */
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .competitions-section {
+    padding: 60px 20px;
+  }
+  .competitions-section h2 {
+    font-size: 2rem;
+  }
+  .competition-card {
+    padding: 1.5rem;
+  }
+}

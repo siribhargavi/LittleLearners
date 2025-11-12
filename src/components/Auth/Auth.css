@@ -1,0 +1,314 @@
+.auth-container {
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;       /* horizontally center */
+  align-items: center;       /* move content to top */
+  padding-top: 5px;             /* distance from top */
+  background: linear-gradient(135deg, #fffbe6, #eaf3ff);
+  font-family: "Poppins", sans-serif;
+  z-index: 0;
+}
+
+
+/* ===============================
+   ✨ Floating Alphabets & Emojis
+   =============================== */
+.floating-symbol {
+  position: absolute;
+  bottom: -30px;
+  color: #333;
+  opacity: 0.8;
+  font-family: 'Fredoka One', 'Baloo 2', cursive;
+  animation: floatUpSymbols linear infinite;
+  user-select: none;
+}
+
+@keyframes floatUpSymbols {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-50vh) rotate(15deg);
+    opacity: 0.9;
+  }
+  100% {
+    transform: translateY(-120vh) rotate(-15deg);
+    opacity: 0;
+  }
+}
+
+/* Optional — give the alphabets a slightly colorful look */
+.floating-symbol:nth-child(3n) { color: #ff6b6b; }
+.floating-symbol:nth-child(4n) { color: #1c7ed6; }
+.floating-symbol:nth-child(5n) { color: #f59f00; }
+.floating-symbol:nth-child(6n) { color: #2b8a3e; }
+.floating-symbol:nth-child(7n) { color: #9c36b5; }
+
+
+/* Signup Card */
+/* ===============================
+   🧩 AUTH CARD – UPGRADED STYLE
+   =============================== */
+
+.auth-card {
+  background: #ffffffcc;
+  backdrop-filter: blur(15px);
+  border-radius: 24px;
+  padding: 30px 30px;
+  text-align: center;
+  width: 400px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08),
+              0 0 20px rgba(255, 213, 79, 0.2);
+  position: relative;
+  z-index: 10;
+  animation: fadeIn 1.2s ease forwards;
+  border: 2px solid rgba(255, 183, 3, 0.15);
+}
+
+/* Heading */
+.auth-card h2 {
+  font-family: 'Fredoka One', cursive;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #ff8c00;
+  margin-bottom: 10px;
+  letter-spacing: 0.5px;
+  text-shadow: 0 2px 4px rgba(255, 165, 0, 0.2);
+}
+
+/* Description */
+.auth-card p {
+  font-family: 'Baloo 2', cursive;
+  font-size: 1.05rem;
+  color: #4b4b4b;
+  margin-bottom: 25px;
+  line-height: 1.4;
+}
+
+/* Inputs */
+.auth-card input {
+  display: block;
+  width: 100%;
+  padding: 12px 15px;
+  margin: 10px 0;
+  border: 2px solid #555;
+  border-radius: 12px;
+  font-size: 1rem;
+  background: #fdf9f2;
+  font-family: 'Poppins', sans-serif;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(255, 204, 0, 0.1);
+}
+
+.auth-card input:focus {
+  border-color: #ffd43b;
+  box-shadow: 0 0 8px rgba(255, 193, 7, 0.4);
+  background: #fffdf3;
+  outline: none;
+}
+
+/* Button */
+.auth-btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(90deg, #ffb703, #ffd43b);
+  color: #0c2594;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: 'Baloo 2', cursive;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+}
+
+.auth-btn:hover {
+  background: linear-gradient(90deg, #ffd43b, #ffb703);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 193, 7, 0.35);
+}
+
+/* Switch text */
+.switch-text {
+  font-size: 15px;
+  margin-top: 20px;
+  color: #555;
+  font-family: 'Poppins', sans-serif;
+}
+
+.switch-text a {
+  color: #ff8c00;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.switch-text a:hover {
+  color: #e56b00;
+  text-decoration: underline;
+}
+.auth-container1 {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* move content to top */
+  padding-top: 40px;       /* more spacing from top */
+  gap: 60px;               /* space between avatar & card */
+  background: linear-gradient(135deg, #fffbe6, #eaf3ff);
+  font-family: "Poppins", sans-serif;
+  z-index: 0;
+}
+
+
+/* Falling stars */
+.falling-star {
+  position: absolute;
+  top: -5%;
+  background-color: #f75b5b;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 1;
+  animation: fallDown linear infinite;
+}
+@keyframes fallDown {
+  0% { transform: translateY(-10vh) rotate(0deg); opacity: 0.8; }
+  50% { transform: translateY(50vh) rotate(15deg); opacity: 0.9; }
+  100% { transform: translateY(110vh) rotate(-15deg); opacity: 0; }
+}
+
+/* Avatar */
+.avatar-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  z-index: 10;
+}
+
+.avatar {
+  width: 300px;   /* increased size */
+  height: 380px;
+  border-radius: 20%;
+  margin-bottom: 15px;
+  animation: floatAvatar 10.5s ease-in-out infinite alternate;
+}
+
+.speech-bubble {
+  background: #020220;
+  color: #f1dbd5;
+  padding: 12px 18px;
+  border-radius: 25px;
+  font-weight: 600;
+  font-family: 'Baloo 2', cursive;
+  text-align: center;
+  box-shadow: 0 5px 20px rgba(255,193,7,0.3);
+  animation: fadeIn 2s ease forwards;
+  max-width: 200px;
+}
+
+@keyframes floatAvatar {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-10px); }
+}
+
+
+
+/* SignIn Card */
+.auth-card.signin-card {
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 30px;
+  margin-top: 10px;
+  text-align: center;
+  width: 400px;
+  max-width: 90%;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.1),
+              0 0 20px rgba(255,213,79,0.15);
+  position: relative;
+  z-index: 10;
+  transform: translateX(40px); /* move slightly left */
+}
+
+/* Inputs */
+.signin-card input {
+  display: block;
+  width: 100%;
+  padding: 13px 15px;
+  margin: 10px 0;
+  border: 2px solid #555;
+  border-radius: 14px;
+  font-size: 1rem;
+  background: #fdf9f2;
+  font-family: 'Poppins', sans-serif;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 10px rgba(255,204,0,0.1);
+}
+.signin-card input:focus {
+  border-color: #ffd43b;
+  box-shadow: 0 0 10px rgba(255,193,7,0.4);
+  background: #fffdf3;
+  outline: none;
+}
+
+/* Button */
+.auth-btn.signin-btn {
+  width: 100%;
+  padding: 13px;
+  border-radius: 20px;
+  background: linear-gradient(90deg, #ffb703, #ffd43b);
+  color: #0c2594;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: 'Baloo 2', cursive;
+  transition: all 0.3s ease;
+  border: none;
+  box-shadow: 0 3px 12px rgba(255,193,7,0.3);
+}
+.auth-btn.signin-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255,193,7,0.35);
+  background: linear-gradient(90deg, #ffd43b, #ffb703);
+}
+
+/* Switch Text */
+.switch-text {
+  font-size: 15px;
+  margin-top: 20px;
+  color: #555;
+  font-family: 'Poppins', sans-serif;
+}
+.switch-text a {
+  color: #19176d;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+.switch-text a:hover {
+  color: #e56b00;
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .auth-container1 {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .signin-card {
+    transform: translateX(0);
+    width: 90%;
+  }
+  .avatar {
+    width: 120px;
+    height: 120px;
+  }
+}

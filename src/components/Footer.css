@@ -1,0 +1,128 @@
+.footer {
+  background: linear-gradient(135deg, #fff5b7, #ffcc70);
+  color: #2c2c2c; /* Deep charcoal for good contrast */
+  padding: 3rem 5rem;
+  margin-top: 4rem;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* Floating glow orbs for playful light */
+.footer::before {
+  content: "";
+  position: absolute;
+  top: -50px;
+  left: -50px;
+  width: 150px;
+  height: 150px;
+  background: rgba(255, 223, 0, 0.25);
+  border-radius: 50%;
+  filter: blur(60px);
+}
+.footer::after {
+  content: "";
+  position: absolute;
+  bottom: -40px;
+  right: -60px;
+  width: 200px;
+  height: 200px;
+  background: rgba(255, 150, 0, 0.25);
+  border-radius: 50%;
+  filter: blur(80px);
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+  position: relative;
+  z-index: 2;
+}
+
+.footer-col {
+  flex: 1;
+  min-width: 220px;
+}
+
+.footer-col h4 {
+  margin-bottom: 0.8rem;
+  font-family: 'Fredoka One', cursive;
+  color: #004aad; /* Deep blue for contrast */
+}
+
+.footer-col p, 
+.footer-col li, 
+.footer-bottom {
+  font-family: 'Poppins', sans-serif;
+  color: #333; /* Slightly softer than pure black */
+  line-height: 1.6;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col li {
+  margin-bottom: 0.3rem;
+}
+
+.footer-col a {
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-col a:hover {
+  color: #004aad; /* Subtle blue hover accent */
+}
+
+.socials {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.socials a {
+  font-size: 1.8rem;
+  transition: transform 0.3s ease, color 0.3s ease;
+  color: #333; /* Default dark tone for icons */
+}
+
+/* Individual platform hover effects */
+.socials a.facebook:hover {
+  color: #1877f2;
+  transform: scale(1.2);
+}
+.socials a.instagram:hover {
+  color: #e1306c;
+  transform: scale(1.2);
+}
+.socials a.youtube:hover {
+  color: #ff0000;
+  transform: scale(1.2);
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  color: #444;
+  z-index: 2;
+  position: relative;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 2rem;
+  }
+  .footer-top {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
