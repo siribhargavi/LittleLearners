@@ -92,7 +92,7 @@
 .auth-card input {
   display: block;
   width: 100%;
-  padding: 12px 15px;
+  padding: 12px 5px;
   margin: 10px 0;
   border: 2px solid #555;
   border-radius: 12px;
@@ -240,7 +240,7 @@
 .signin-card input {
   display: block;
   width: 100%;
-  padding: 13px 15px;
+  padding: 13px 5px;
   margin: 10px 0;
   border: 2px solid #555;
   border-radius: 14px;

@@ -1,8 +1,8 @@
 .footer {
   background: linear-gradient(135deg, #fff5b7, #ffcc70);
   color: #2c2c2c; /* Deep charcoal for good contrast */
-  padding: 3rem 5rem;
-  margin-top: 4rem;
+   padding: 1.5rem 3rem; /* ⬅️ reduced from 3rem 5rem */
+  margin-top: 2rem; /* ⬅️ reduced top margin */
   position: relative;
   overflow: hidden;
   box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.05);
@@ -14,8 +14,8 @@
   position: absolute;
   top: -50px;
   left: -50px;
-  width: 150px;
-  height: 150px;
+  width: 20px;
+  height: 20px;
   background: rgba(255, 223, 0, 0.25);
   border-radius: 50%;
   filter: blur(60px);
@@ -25,8 +25,8 @@
   position: absolute;
   bottom: -40px;
   right: -60px;
-  width: 200px;
-  height: 200px;
+  width: 50px;
+  height: 50px;
   background: rgba(255, 150, 0, 0.25);
   border-radius: 50%;
   filter: blur(80px);
@@ -47,7 +47,7 @@
 }
 
 .footer-col h4 {
-  margin-bottom: 0.8rem;
+  margin-bottom: 0.4rem; /* ⬅️ tighter spacing */
   font-family: 'Fredoka One', cursive;
   color: #004aad; /* Deep blue for contrast */
 }
@@ -57,7 +57,7 @@
 .footer-bottom {
   font-family: 'Poppins', sans-serif;
   color: #333; /* Slightly softer than pure black */
-  line-height: 1.6;
+  line-height: 0.5;
 }
 
 .footer-col ul {
@@ -108,7 +108,7 @@
 
 .footer-bottom {
   text-align: center;
-  margin-top: 2rem;
+  margin-top: 1rem;
   font-size: 0.9rem;
   color: #444;
   z-index: 2;

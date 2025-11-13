@@ -7,11 +7,8 @@ const SignUp = () => {
   const navigate = useNavigate();
 
   const symbols = [
-    // Alphabets A–Z
     "A","B","C","D","E","F","G","H","I","J","K","L","M",
     "N","O","P","Q","R","S","T","U","V","W","X","Y","Z",
-
-    // Fun learning emojis
     "📖","🅰️","🅱️","🧠","🔤","📚","🖍️","✏️","📘","📕",
     "📗","📙","🧩","🎨","🎈","⭐","🌈","💡","🧸","🎵",
     "🪄","🔠","🔢","🧮","✂️","📏","📐","🎓","💫","🪁",
@@ -19,6 +16,7 @@ const SignUp = () => {
     "💜","🍏","🎠","🪅","🎁","📒","📔","📓","✒️","🔡"
   ];
 
+  // Floating symbols animation setup
   useEffect(() => {
     const generated = Array.from({ length: 40 }, (_, i) => ({
       id: i,
@@ -26,20 +24,34 @@ const SignUp = () => {
       left: Math.random() * 100,
       delay: Math.random() * 5,
       size: Math.random() * 1.2 + 0.8,
-      duration: Math.random() * 8 + 8,
+      duration: Math.random() * 10 + 10,
     }));
     setSymbolsList(generated);
   }, []);
 
+  // Save credentials on submit
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert("Registration successful (mock)!");
+    const name = e.target.name.value.trim();
+    const email = e.target.email.value.trim();
+    const password = e.target.password.value;
+
+    if (!name || !email || !password) {
+      alert("Please fill all fields!");
+      return;
+    }
+
+    // Save user data to localStorage (mock registration)
+    const user = { name, email, password };
+    localStorage.setItem("littleLearnerUser", JSON.stringify(user));
+
+    alert(`🎉 Welcome aboard, ${name}! Your account has been created.`);
     navigate("/signin");
   };
 
   return (
     <div className="auth-container">
-      {/* 🌈 Floating symbols */}
+      {/* Floating fun symbols */}
       {symbolsList.map((s) => (
         <span
           key={s.id}
@@ -55,7 +67,7 @@ const SignUp = () => {
         </span>
       ))}
 
-      {/* 🧩 Auth card */}
+      {/* Auth card */}
       <div className="auth-card">
         <h2>Join Little Learners 🌟</h2>
         <p>Fun. Creative. Inspiring. Let’s Gooo..</p>
