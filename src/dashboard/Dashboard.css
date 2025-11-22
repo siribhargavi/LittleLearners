@@ -5,16 +5,12 @@
   background: linear-gradient(135deg, #f5f8ff, #e6f0ff);
   font-family: "Poppins", sans-serif;
   color: #333;
-    padding-top: 80px; /* equal to navbar height */
-padding-right: 65px;
-    margin-top: 0 !important;
-  padding-top: 0 !important;
-
 }
 
 .dashboard-body {
   display: flex;
   height: 100%;
+  padding-top: 20px;
 }
 
 /* Sidebar */
@@ -53,11 +49,13 @@ padding-right: 65px;
 .main-content {
   flex: 1;
   padding: 40px;
+  animation: fadeIn 0.6s ease-in-out;
 }
 
 .main-content h2 {
   font-size: 28px;
   color: #1d2b64;
+  margin-bottom: 8px;
 }
 
 .main-content p {
@@ -66,13 +64,46 @@ padding-right: 65px;
   font-size: 16px;
 }
 
+/* Class Selector Chips */
+.class-selector {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+.class-chip {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 25px;
+  background: #4f6df5;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.3s, background 0.3s;
+}
+
+.class-chip:hover {
+  background: #3450d1;
+  transform: translateY(-3px);
+}
+
+/* Section Titles */
+.section-title {
+  font-size: 22px;
+  margin-bottom: 15px;
+  color: #1d2b64;
+  font-weight: 600;
+}
+
+/* Cards Grid */
 .card-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
   gap: 20px;
 }
 
-/* Cards */
+/* Dashboard Cards */
 .dash-card {
   background: #fff;
   padding: 25px;
@@ -80,45 +111,61 @@ padding-right: 65px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Floating animation for cards */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+.dash-card.subject {
+  animation: float 3s ease-in-out infinite;
 }
 
 .dash-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  transform: translateY(-8px) scale(1.05);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+  animation: none; /* stop floating on hover */
 }
 
-.dash-card h3 {
-  font-size: 20px;
-  margin-bottom: 10px;
-}
-
-.dash-card p {
-  font-size: 14px;
-  color: #666;
-}
-
-.dash-card button {
-  margin-top: 12px;
-  background: #4f6df5;
-  color: #fff;
-  border: none;
-  border-radius: 12px;
-  padding: 8px 16px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background 0.3s;
-}
-
-.dash-card button:hover {
-  background: #3450d1;
-}
-
-/* Soft animations */
+/* Soft fade-in */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(10px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
-.main-content {
-  animation: fadeIn 0.6s ease-in-out;
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .dashboard-body {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    display: flex;
+    overflow-x: auto;
+    border-radius: 0 0 20px 20px;
+    border-right: none;
+    border-bottom: 3px solid #e0e7ff;
+  }
+
+  .sidebar ul {
+    display: flex;
+    gap: 12px;
+    margin: 0;
+  }
+
+  .sidebar li {
+    flex: 0 0 auto;
+  }
+
+  .card-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
 }

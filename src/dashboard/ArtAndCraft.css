@@ -1,0 +1,98 @@
+/* ====== Main Content Layout ====== */
+.main-content {
+  padding: 20px;
+  width: 100%;
+  z-index: 10;
+}
+
+.section-title {
+  margin-bottom: 20px;
+  font-family: 'Fredoka One', cursive;
+  font-size: 2.6rem;
+  color: #e22030;
+}
+
+/* ====== GRID ====== */
+.pastel-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);   /* 4 per row */
+  gap: 18px;
+  padding-bottom: 30px;
+}
+
+/* ====== Flip Card ====== */
+.flip-card {
+  background: transparent;
+  perspective: 1000px;
+  width: 80%;
+  height: 100px;   /* small squares */
+margin-bottom: 20px;}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s ease;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* ====== FRONT & BACK ====== */
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
+  backface-visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px;
+  text-align: center;
+  font-size: 15px;
+  color: #333;
+}
+
+/* BACK SIDE */
+.flip-card-back {
+  transform: rotateY(180deg);
+}
+
+/* ====== Soft Pastel Color Gradient ====== */
+.pastel-box {
+  background: linear-gradient(
+    135deg,
+    #ffe6f2,
+    #e6f7ff,
+    #fff5cc,
+    #e6ffe6,
+    #f3e6ff
+  );
+  background-size: 300% 300%;
+  animation: pastelShift 6s ease infinite;
+}
+
+@keyframes pastelShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ====== Button ====== */
+.know-more-btn {
+  background: #fff;
+  border: 2px solid #ffd8e8;
+  padding: 6px 12px;
+  border-radius: 12px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.know-more-btn:hover {
+  background: #ffe6f2;
+}

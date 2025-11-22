@@ -34,8 +34,8 @@ const NavbarAfterLogin = () => {
       {/* Center Links */}
       <ul className="nav-links-after">
         <li onClick={() => navigate("/dashboard")}>Home</li>
-        <li>Explore</li>
-        <li>Learn</li>
+<li onClick={() => navigate("/puzzle-world")}>Explore</li>
+        <li onClick={() => navigate("/learn")}>Learn</li>
         <li>Create</li>
         <li>Compete</li>
         <li>Progress</li>

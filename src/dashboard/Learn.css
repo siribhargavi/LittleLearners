@@ -1,0 +1,145 @@
+/* Background */
+.learn-wrap {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #fce7e2, #fff6ea);
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* HERO */
+.learn-hero {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.learn-title {
+  font-size: 42px;
+  font-weight: 700;
+  color: #4a2c2a;
+}
+
+.learn-sub {
+  margin-top: 8px;
+  font-size: 18px;
+  color: #6d4b47;
+}
+
+.learn-cta-row {
+  margin-top: 20px;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.cta-primary {
+  padding: 12px 28px;
+  background: #ff8b38;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.cta-ghost {
+  padding: 12px 26px;
+  border: 2px solid #ff8b38;
+  background: transparent;
+  color: #ff8b38;
+  border-radius: 30px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* MODULE CARD */
+.module {
+  margin: 40px auto;
+  max-width: 1000px;
+  background: white;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.07);
+}
+
+
+/* FLASHCARDS */
+.flashcard-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 25px;
+}
+
+.flashcard {
+  width: 180px;
+  height: 230px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 38px;
+  font-weight: 700;
+  cursor: pointer;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.7s;
+}
+
+.flashcard.flipped {
+  transform: rotateY(180deg);
+}
+
+.flash-front,
+.flash-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flash-back {
+  transform: rotateY(180deg);
+  font-size: 22px;
+  padding: 10px;
+}
+
+/* Flash buttons */
+.flash-controls {
+  margin-top: 15px;
+  display: flex;
+  gap: 12px;
+}
+
+.ghost-btn {
+  padding: 10px 20px;
+  border: 2px solid #b76640;
+  background: transparent;
+  color: #b76640;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+/* 🦁 FINAL LION CUB */
+#learn-lion-cub {
+  position: absolute;
+  width: 150px;
+  z-index: 50;
+  pointer-events: none;
+  opacity: 1;
+  transition: transform 1.6s ease-in-out;
+  animation: cubFloat 3.2s ease-in-out infinite;
+  filter: drop-shadow(0 6px 10px rgba(0,0,0,0.18));
+}
+
+@keyframes cubFloat {
+  0%   { transform: translateY(0) rotate(0deg); }
+  50%  { transform: translateY(-12px) rotate(2deg); }
+  100% { transform: translateY(0) rotate(0deg); }
+}

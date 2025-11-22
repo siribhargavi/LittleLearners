@@ -18,32 +18,33 @@ export default function Dashboard() {
       setUserName("Little Learner");
     }
 
-    // ✅ Redirect if not logged in
+    // Redirect if not logged in
     if (!loggedIn) {
       window.location.href = "/signin";
     }
   }, []);
 
-  if (!isLoggedIn) return null; // Don’t render dashboard until verified
+  if (!isLoggedIn) return null;
 
   return (
     <div className="dashboard-container">
-      {/* ✅ Show only after-login navbar */}
-      <NavbarAfterLogin />
 
-      {/* Main Dashboard Layout */}
       <div className="dashboard-body">
-        {/* Sidebar */}
+        {/* Sidebar - Interest Zones */}
         <aside className="sidebar">
           <ul>
-            <li>📘 My Class</li>
-            <li>🤖 Robotics</li>
+<li>
+  <a href="/art-and-craft" className="nav-link" style={{ textDecoration: 'none' }}>
+    🎨 Art & Craft
+  </a>
+</li>
+
             <li>💻 Coding</li>
-            <li>🎨 Art & Craft</li>
-            <li>🏃 Sports</li>
+            <li>🤖 Robotics</li>
             <li>📚 Books</li>
+            <li>🏃 Sports</li>
             <li>🔬 Science Lab</li>
-            <li>🏆 My Competitions</li>
+            <li>🏆 Competitions</li>
             <li>📈 Progress</li>
           </ul>
         </aside>
@@ -53,36 +54,28 @@ export default function Dashboard() {
           <h2>Hi {userName} 👋</h2>
           <p>Welcome back! Let’s make today a fun learning adventure.</p>
 
-          <div className="card-grid">
-            <div className="dash-card learn">
-              <h3>📖 Learn</h3>
-              <p>Explore worksheets, charts, and subjects.</p>
-              <button>Go</button>
-            </div>
+          {/* Class Selector */}
+          <div className="class-selector">
+            {["Nursery", "LKG", "UKG", "Class 1", "Class 2"].map((cls) => (
+              <button key={cls} className="class-chip">
+                {cls}
+              </button>
+            ))}
+          </div>
 
-            <div className="dash-card create">
-              <h3>🎨 Create</h3>
-              <p>Draw, write, or craft something amazing!</p>
-              <button>Start</button>
-            </div>
+          {/* Core Subjects */}
+          <h3 className="section-title">📚 Core Subjects</h3>
 
-            <div className="dash-card compete">
-              <h3>🏆 Compete</h3>
-              <p>Join fun competitions and win badges.</p>
-              <button>View</button>
-            </div>
-
-            <div className="dash-card club">
-              <h3>🧠 Clubs</h3>
-              <p>Join reading or science clubs with friends.</p>
-              <button>Join</button>
-            </div>
-
-            <div className="dash-card progress">
-              <h3>📈 Progress</h3>
-              <p>Track your daily learning streak and growth.</p>
-              <button>Check</button>
-            </div>
+          <div className="card-grid subjects-grid">
+            <div className="dash-card subject">🔢 Math</div>
+            <div className="dash-card subject">🌍 EVS / Science</div>
+            <div className="dash-card subject">🧠 GK</div>
+            <div className="dash-card subject">🎵 Rhymes</div>
+            <div className="dash-card subject">📘 Stories</div>
+            <div className="dash-card subject">🗣️ Languages</div>
+            <div className="dash-card subject">📖 Archana</div>
+            <div className="dash-card subject">🙏 Sadacharam</div>
+            
           </div>
         </main>
       </div>
