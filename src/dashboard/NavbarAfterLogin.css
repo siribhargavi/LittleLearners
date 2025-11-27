@@ -96,3 +96,6 @@
   background: #ff2e63;
   transform: scale(1.05);
 }
+.user-name {
+  cursor: pointer;
+}

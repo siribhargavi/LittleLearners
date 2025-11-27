@@ -15,6 +15,9 @@ import Footer from './components/Footer';
 import Competitions from './components/Competitions';
 import HeroSection from './components/HeroSection';
 import ArtAndCraft from './dashboard/ArtAndCraft';
+import Compete from './dashboard/Compete';
+import Progress from './dashboard/Progress';
+import Profile from './dashboard/Profile';
 
 function ScrollToHash() {
   const { pathname, hash } = useLocation();
@@ -42,6 +45,8 @@ function App() {
     '/learn',
     '/create',
     '/explore',
+    '/compete',
+    '/progress',
     '/art-and-craft',
     '/competitions',
   ];
@@ -76,6 +81,9 @@ function App() {
         <Route path="/learn" element={<LearnHub />} />
         <Route path="/create" element={<CreateHub />} />
         <Route path="/explore" element={<ExploreCards />} />
+        <Route path="/compete" element={<Compete />} />
+        <Route path="/progress" element={<Progress />} />
+        <Route path="/profile" element={<Profile />} />
         <Route path="/competitions" element={<Competitions />} />
         <Route path="/art-and-craft" element={<ArtAndCraft />} />
       </Routes>

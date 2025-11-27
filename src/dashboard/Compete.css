@@ -1,0 +1,89 @@
+/* MAIN WRAPPER */
+.compete-wrap {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #ffe8dd, #fff4ea);
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* HERO SECTION */
+.compete-hero {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.compete-title {
+  font-size: 42px;
+  font-weight: 700;
+  color: #8a4b39;
+}
+
+.compete-sub {
+  margin-top: 8px;
+  font-size: 18px;
+  color: #a96550;
+}
+
+/* GRID */
+.compete-grid {
+  margin: 40px auto;
+  max-width: 1000px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+/* CARDS */
+.compete-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  text-align: center;
+  transition: 0.25s;
+}
+
+.compete-card h3 {
+  color: #7d3f2b;
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+.compete-card p {
+  color: #a27566;
+  font-size: 15px;
+  margin-bottom: 15px;
+}
+
+.join-btn {
+  padding: 10px 20px;
+  background: #ff8a4b;
+  color: white;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.join-btn:hover {
+  background: #ff7a2b;
+}
+/* 🐻 BEAR (STATIC IMAGE — NO MOVEMENT) */
+.bear-cub {
+  position: absolute;
+  top: 10px;      /* adjust where you want it */
+  left: 220px;       /* adjust position */
+  width: 140px;
+  z-index: 20;
+  pointer-events: none; /* It won’t interfere with clicks */
+}
+
+/* Remove ALL animations if present */
+.bear-cub,
+.bear-cub img {
+  animation: none !important;
+  transform: none !important;
+}
+
+

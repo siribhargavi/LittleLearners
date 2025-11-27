@@ -1,0 +1,112 @@
+/* Forest themed Profile (Little Learners) */
+
+:root{
+  --bg1: #f6fff5;
+  --leaf: #7bbf6a;
+  --leaf-dark: #4b8a3a;
+  --bark: #8a5a3c;
+  --muted: #7b5b43;
+  --card: #ffffff;
+}
+
+.profile-wrap {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #f8fff8 0%, #eef7ef 100%);
+  padding: 18px;
+  font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+  color: #3b2b1b;
+}
+
+/* header */
+.pf-header {
+  max-width: 1100px;
+  margin: 6px auto 20px;
+  display:flex;
+  gap: 18px;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.pf-left { display:flex; gap:14px; align-items:center; }
+.avatar-card {
+  width: 120px; height: 120px; border-radius: 18px; overflow: hidden;
+  background: linear-gradient(180deg,#fff,#f0fbf0);
+  display:flex; align-items:center; justify-content:center;
+  box-shadow: 0 10px 30px rgba(75,138,58,0.08);
+}
+.pf-avatar { width: 96px; height: 96px; object-fit:contain; }
+
+.pf-info { min-width:220px; }
+.pf-name { font-size:22px; font-weight:800; color:var(--bark); }
+.pf-class { margin-top:6px; color:var(--muted); font-weight:700; }
+
+.pf-edit-btn { margin-top:10px; padding:8px 12px; border-radius:12px; border:none; background: linear-gradient(90deg,#4caf50,#7bd97a); color:white; cursor:pointer; font-weight:700; }
+
+/* overall progress ring */
+.pf-right { display:flex; align-items:center; gap:12px; }
+.pf-overall-card { width:160px; text-align:center; background:var(--card); padding:12px; border-radius:12px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+.pf-overall-title { color:var(--leaf-dark); font-weight:800; margin-bottom:8px; }
+.pf-ring {
+  width:86px; height:86px; border-radius:50%;
+  display:flex; align-items:center; justify-content:center; font-weight:800; color:#2b3d22;
+  /* use CSS variable --p for percentage (0-100) */
+  background: conic-gradient(#7bd97a calc(var(--p) * 1%), #e9f4ea 0);
+  box-shadow: 0 10px 20px rgba(123,191,106,0.14);
+}
+.pf-ring span { font-size:18px; }
+
+/* avatars chooser */
+.pf-avatars { max-width:1100px; margin: 6px auto 18px; padding: 12px; background: linear-gradient(180deg,#f8fff8,#f2fbf2); border-radius:12px; }
+.pf-avatars h3 { margin: 0 0 8px 0; }
+.pf-avatar-grid { display:flex; gap:12px; align-items:center; flex-wrap:wrap; }
+.pf-avatar-option { background:transparent; border:2px solid transparent; padding:8px; border-radius:12px; display:flex; flex-direction:column; align-items:center; gap:8px; cursor:pointer; }
+.pf-avatar-option img { width:64px; height:64px; object-fit:contain; border-radius:10px; }
+.pf-avatar-option .opt-label { font-size:13px; color:var(--muted); font-weight:700; }
+.pf-avatar-option.active { border-color: rgba(75,138,58,0.14); box-shadow: 0 8px 18px rgba(75,138,58,0.08); transform: translateY(-4px); }
+
+/* main grid */
+.pf-main-grid { max-width:1100px; margin: 14px auto; display:grid; grid-template-columns: 1fr 340px; gap: 18px; align-items:start; }
+
+/* cards */
+.pf-card { background:var(--card); border-radius:14px; padding:14px; box-shadow: 0 12px 30px rgba(0,0,0,0.04); }
+.pf-card h3 { margin: 0 0 6px 0; color:var(--leaf-dark); }
+
+/* achievements */
+.muted { color: #7b5b43; }
+.pf-badges { display:flex; gap:12px; flex-wrap:wrap; margin-top:12px; }
+.pf-badge { width:112px; height:112px; border-radius:12px; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:8px; cursor:pointer; background: linear-gradient(180deg,#fff,#fbfff8); border:1px solid rgba(0,0,0,0.03); }
+.pf-badge.earned { box-shadow: 0 12px 26px rgba(123,191,106,0.12); transform: translateY(-4px); }
+.pf-badge.locked { opacity:0.28; filter:grayscale(40%); }
+.badge-icon { font-size:28px; }
+.badge-name { font-weight:800; color:#5a3f2a; font-size:13px; }
+
+/* streak card */
+.streak-row { display:flex; flex-direction:column; gap:6px; margin-top:8px; align-items:flex-start; }
+.streak-big { font-size:24px; font-weight:900; color: #d9622b; }
+.streak-sub { color:var(--muted); font-weight:700; }
+
+/* rings grid */
+.rings-grid { display:flex; gap:10px; flex-direction:column; margin-top:8px; }
+.ring-item { display:flex; align-items:center; gap:8px; }
+.small-ring {
+  width:58px; height:58px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:800; color:#1f3b1f;
+  background: conic-gradient(#ffd86b calc(var(--p) * 1%), #eef6ea 0);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.06);
+}
+.ring-label { font-weight:800; color:#4e3a29; font-size:13px; }
+
+/* modal */
+.pf-modal-back { position: fixed; inset:0; background: rgba(12,12,12,0.35); display:flex; align-items:center; justify-content:center; z-index:1400; }
+.pf-modal { width:320px; background:white; padding:12px 14px; border-radius:12px; box-shadow: 0 20px 60px rgba(0,0,0,0.25); text-align:center; }
+.modal-actions { margin-top:12px; display:flex; justify-content:center; gap:10px; }
+.pf-btn { padding:8px 12px; border-radius:10px; border:none; background: linear-gradient(90deg,#6fc97a,#4bb35e); color:white; font-weight:700; cursor:pointer; }
+
+/* edit form */
+.pf-input { display:block; width:220px; padding:8px 10px; border-radius:10px; border:1px solid #e6e1db; margin-bottom:8px; }
+
+/* responsive */
+@media (max-width: 920px) {
+  .pf-main-grid { grid-template-columns: 1fr; }
+  .pf-right { display:none; } /* hide overall ring on small screens */
+  .pf-avatar-grid { justify-content:flex-start; }
+}
