@@ -18,6 +18,7 @@ import ArtAndCraft from './dashboard/ArtAndCraft';
 import Compete from './dashboard/Compete';
 import Progress from './dashboard/Progress';
 import Profile from './dashboard/Profile';
+import MathsNur from './InsideComponents/MathsNur';
 
 function ScrollToHash() {
   const { pathname, hash } = useLocation();
@@ -86,6 +87,9 @@ function App() {
         <Route path="/profile" element={<Profile />} />
         <Route path="/competitions" element={<Competitions />} />
         <Route path="/art-and-craft" element={<ArtAndCraft />} />
+
+        <Route path="/nursery-math" element={<MathsNur />} />
+
       </Routes>
 
       {showFooter && <Footer />}

@@ -67,7 +67,13 @@ export default function Dashboard() {
           <h3 className="section-title">📚 Core Subjects</h3>
 
           <div className="card-grid subjects-grid">
-            <div className="dash-card subject">🔢 Math</div>
+<div
+  className="dash-card subject"
+  onClick={() => window.location.href = "/nursery-math"}
+  style={{ cursor: "pointer" }}
+>
+  🔢 Math
+</div>
             <div className="dash-card subject">🌍 EVS / Science</div>
             <div className="dash-card subject">🧠 GK</div>
             <div className="dash-card subject">🎵 Rhymes</div>
